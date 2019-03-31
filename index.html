@@ -7,17 +7,19 @@
 		<meta property="og:type" content="website" >
 		<meta property="og:image" content="">
 		<meta property="og:description" content="Search for Spotify songs">
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="styles/styles.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="scripts/date.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet"> 
+        <link rel="stylesheet" href="styles/styles.css">
 		<link rel="icon" href="images/logo.png">
 		<title>Spotifynt</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg ">
             <a class="navbar-brand" href="index.html"><img id="logo" src="images\logo.png" alt="">Spotifynt</a>
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                     <ul class="navbar-nav ml-auto">
@@ -38,63 +40,40 @@
                 </ul>
             </div>
         </nav>
-        
-        <div class="container">
 
-                <div class="row">
-                    <div class ="column col-md-8 col-lg-7">
-                        <div class="jumbotron" style="background-color: white; ">
-                            <h1 class="display-4">Start Here</h1>
-                            <input type="text" id="searchV" class="form-control my-4" aria-describedby="Search" placeholder="Enter whatever you want to find">   
-                            <button class="btn btn-primary mt-2" id="searchB">Submit</button>
-                        </div>
-                        <div class=" column col-md-12" id="noText" style = "display: none;">
-                            <hr class=" my-4">
-                            <p class="lead">No items found.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <button class="btn btn-primary mt-2" id="login">Login</button>
-                </div>
-                <div class="row" id="search-results">
-                    
+        <div class="container">
+            <div> 
+            <div class="row">
+                <div class="column col-md-8 col-lg-7">
+                <input type="text" id="searchV" class="form-control my-4" aria-describedby="Search" placeholder="Enter whatever you want to find">
+                <label for="type">Type</label>
+                    <select class="custom-select" id="type" required>
+                        <option value="album,artist"selected>Both</option>
+                        <option value="artist">Artist</option>
+                        <option value="album">Album</option>
+                    </select>
                 </div>
             </div>
+            <button class="btn btn-primary mt-2 mb-4" id="searchB">Submit</button>
+                    
+            <div class=" column col-md-12" id="noText" style = "display: none;">
+                <hr class=" my-4">
+                <p class="lead">No items found.</p>
+            </div>
+        </div>
+        <div class="row" id="search-results">
+
+            </div>
+        </div>
+        </div>
                 
-        <footer class="footer page-footer font-small bg-dark mt-4 pt-3">
+        <footer class="footer page-footer font-small mt-4 pt-3">
   		
-	    	<div class="container-fluid text-center text-md-left">
-
-			    <div class="row">
-				    <div class="col-md-6 mt-md-0 mt-3">
-					<h5 class="text-uppercase text-white">Spotifynt</h5>
-						<p class="text-white">Find new songs and playlists to listen to on Spotify</p>
-					</div>
-			        <hr class="clearfix w-100 d-md-none pb-3">
-					<div class="col-md-3 mb-md-0 mb-3">
-			            <h5 class="text-uppercase text-white">Find Us On</h5>
-
-			            <ul class="list-unstyled">
-							<li>
-								<a class="text-white" href="#!">Facebook</a>
-							</li>
-							<li>
-								<a class="text-white" href="#!">Instagram</a>
-							</li>
-							<li>
-								<a class="text-white" href="#!">Whatsapp</a>
-							</li>
-			            </ul>
-			        </div>
-			    </div>
-			</div>
-			<div class="footer-copyright text-center py-2 text-white">© 2019 Copyright:
+			<div class="footer-copyright text-center py-2 text-white">© 2019 :
 					<a class="text-white" href="https://shivakanthsujit.github.io/Spider"> Shiva Kanth Sujit</a>
 			</div>
 			
 		</footer>
   	</body>
       <script src="scripts/scripts.js" charset="utf-8"></script>
-      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </html>
