@@ -1,0 +1,24 @@
+.card{
+    width: 20rem;
+    margin: 5px;
+}
+
+.card-title{
+    text-decoration: none;
+}
+
+.card-text{
+    text-decoration: none;
+}
+
+.card-body a {
+    color: white;
+}
+
+.card-body a:hover {
+    color: whitesmoke;
+}
+
+.i{
+    float: right;
+}
