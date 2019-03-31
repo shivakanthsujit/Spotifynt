@@ -30,13 +30,33 @@ $(document).ready(function(){
         console.log(result);
     },
     error: function(result){
-        errorResult = result;
+        generateToken();
         console.log(result);
     }
         
     })
     });
 
+    function generateToken()
+    {
+        $.ajax({
+            type: "POST",
+            url: "https://accounts.spotify.com/api/token",
+            contentType: "application/json",
+            headers: {"Authorization": "Basic NTNiODAyMGQ5MmI2NDExMzk3MDI5ZDkwMTQxZTNkZmY6ZGViOTRlMjg2Mjg2NDAwYmFkYzE2NjNiMTk1M2M5OTk=", "Content-Type": "application/x-www-form-urlencoded"},
+            data: {"grant_type": "client_credentials"},
+            dataType: 'json',
+            success: function(result){
+                token= "Bearer " + result["access_token"];
+                console.log(token);
+            },
+            error: function(result){
+                errorResult = result;
+                console.log(result);
+            }
+                
+            })
+    }
 
     function createResults(results)
     {
