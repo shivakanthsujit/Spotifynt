@@ -1,5 +1,5 @@
 var searchR;
-var token = "Bearer "+"BQD-_welPUW-_rIvr21cU0wIhLq4n4KHSYm-EzvJFj9M2M8J6N5cmaVyJikrdKlnLRwyGWAlcBiwdWDJz75IxHztagre9a9_hIsdX8ORjRhQ1-lugAssLIh_uboHD1ifwc2cycWB5d82hIu82ppMzEFaHxDLPxLdxg";
+var token = "Bearer "+"BQDIn_pRH5QamFRGTsEf7aenC2eTcj8Zh8rye-7L6JlA96uVUDlWUIn-aVqSbm04eV-BEVqf3AgCLiA80yM";
 var typeN = 0;
 var errorResult;
 $( "#search-results" ).empty();
@@ -97,12 +97,14 @@ $(document).ready(function(){
                 var newDate = date.toString('MMM yyyy');
                 sD = newDate;
                 var sImg = results["albums"]["items"][j]["images"][0]["url"];
-                var string = "<div class=\"card column text-white bg-dark\"><div class=\"card-body\"><div class=\"container-fluid\"><div class=\"row\"><img class=\"m-2 rounded-circle float-right\" src=\""+sImg+"\"><a href=\""+sLink+"\"><h5 class=\"card-title\" id=\""+sId+"\">"+sN+"</h5></a></div></div><p class=\"card-text lead h6\"><small>"+sAN+"</small></p></div></div></div>";
+                var string = "<div class=\"card column text-white bg-dark\"><div class=\"card-body\"><div class=\"container-fluid\"><div class=\"row\"><img class=\"m-2 rounded-circle float-right\" src=\""+sImg+"\"><h5 class=\"card-title\" id=\""+sId+"\">"+sN+"</h5></div></div><p class=\"card-text lead h6\"><small>"+sAN+"</small></p></div></div></div>";
                 $( "#search-results" ).append( string);
             }
             $("h5").click(function(){
                 window.localStorage.clear();
                 window.localStorage.setItem("id",this.id);
+                window.localStorage.setItem("title",this.innerHTML);
+                window.location.href = "playlist.html";
             });
         }
 
