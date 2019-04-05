@@ -1,5 +1,5 @@
 var searchR;
-var token = "Bearer "+"BQDIn_pRH5QamFRGTsEf7aenC2eTcj8Zh8rye-7L6JlA96uVUDlWUIn-aVqSbm04eV-BEVqf3AgCLiA80yM";
+var token = "Bearer "+"BQAUcNDZ1N-x9n82SoCRO7EMftrZnrWUxugnBlJUhTSpKVpRPXi99rvz_pK1xtzgBDw7fazZ4OYUJGgf9gQ";
 var typeN = 0;
 var errorResult;
 $( "#search-results" ).empty();
